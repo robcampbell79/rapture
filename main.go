@@ -85,7 +85,7 @@ func travelTo(gNodes int32, gFrom []int32, gTo []int32, gWeight []int32) {
 					b = gTo[a]
 
 					tripNum++
-					fmt.Println("Second if; w and b are: ", w, b)
+					fmt.Println("Second if; a, b and w are: ", a, b, w)
 					fmt.Println("Second if; tripNum is: ", tripNum)
 				} else if tripNum > 0 && b == gNodes {
 					w2 = gWeight[a] - w
@@ -109,7 +109,6 @@ func travelTo(gNodes int32, gFrom []int32, gTo []int32, gWeight []int32) {
 		w2 = 0
 		tripNum = 0
 		
-		i++
 	}
 
 	for _, e := range wArr {
