@@ -18,7 +18,6 @@ func travelTo(gNodes int32, gFrom []int32, gTo []int32, gWeight []int32) {
 	var b int32 = 0
 	var w int32 = 0
 	var w2 int32 = 0
-	i := 0
 	var j int32 = 0
 	tripNum := 0
 	var strArr []int32
