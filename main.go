@@ -40,10 +40,6 @@ func travelTo(gNodes int32, gFrom []int32, gTo []int32, gWeight []int32) {
 		}
 	}
 
-	for _, e := range nxtArr {
-		fmt.Println("nxtArr: ", e)
-	}
-
 	for k, e := range gFrom {
 		if e == 1 {
 			a = int32(k)
@@ -51,22 +47,25 @@ func travelTo(gNodes int32, gFrom []int32, gTo []int32, gWeight []int32) {
 		}
 	}
 
-
-	for _, e := range strArr {
-		fmt.Println("strArr: ", e)
-	}
-
-	
-	for i < len(strArr) {
+	// gFrom :=	[]int32{1, 2, 3, 4, 1, 3}
+	// gTo :=	[]int32{2, 3, 4, 5, 3, 5}
+	// gWeight :=	[]int32{30, 50, 70, 90, 70, 85}
+	for i := 0; i < len(nxtArr); i++ {
+		for k, e := range gTo {
+			if gFrom[nxtArr[i]] == e {
+				if gFrom[k] == 1 {
+					a = int32(k)
+				}
+			}
+		}
 		MainLoop:
 			for j = 0; j < gNodes; j++ {
-				a = strArr[i]
-				fmt.Println("a = strArr[i] ", a)
+				fmt.Println("a in mainloop ", a)
 				if tripNum < 1 && a != gNodes {
 					w = gWeight[a]
 					b = gTo[a]
 					tripNum++
-					fmt.Println("First if; w and b are: ", w, b)
+					fmt.Println("First if; a, b and w are: ", a, b, w)
 					fmt.Println("First if; tripNum is: ", tripNum)
 				} else if tripNum > 0 && b != gNodes {
 					for k, e := range gFrom {
