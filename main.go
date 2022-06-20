@@ -74,6 +74,7 @@ func travelTo(gNodes int32, gFrom []int32, gTo []int32, gWeight []int32) {
 							break
 						}
 					}
+
 					w2 = gWeight[a] - w
 
 					if w2 < 1 {
